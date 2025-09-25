@@ -241,6 +241,7 @@ class _HabitFormPageState extends State<HabitFormPage> {
       await controller.addHabit(_nameController.text.trim(), _selectedColor);
       print('✅ DEBUG: Habit created successfully');
 
+      // Regresar al menú principal después de crear el hábito exitosamente
       Get.back();
     } catch (e) {
       print('❌ DEBUG: Error creating habit: $e');

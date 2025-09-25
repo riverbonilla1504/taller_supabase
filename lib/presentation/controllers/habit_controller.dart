@@ -154,12 +154,14 @@ class HabitController extends GetxController {
       await load(); // Reload all habits
       print('✅ DEBUG CONTROLLER: Habits reloaded successfully');
 
+      // Mostrar mensaje de éxito
       Get.snackbar(
         'Éxito',
         'Hábito "$name" creado correctamente',
         snackPosition: SnackPosition.BOTTOM,
         backgroundColor: Colors.green.withOpacity(0.8),
         colorText: Colors.white,
+        duration: const Duration(seconds: 2),
       );
       print('✅ DEBUG CONTROLLER: Success snackbar shown');
     } catch (e) {
